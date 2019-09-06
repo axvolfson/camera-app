@@ -38,13 +38,18 @@ camertaRetake.onclick = triggerCountDown;
 function triggerCountDown(){
     let startSecond = 5;
     camertaRetake.style.display ="none";
+    
+    cameraTrigger.classList = "count-effect"
     const countDown = setInterval(()=>{
         cameraTrigger.innerHTML = startSecond <= 0 ? "Smile!" : startSecond;
+        cameraTrigger.style.display="block";
         startSecond--;
         if(startSecond === -2) {
             clearInterval(countDown);
             takePhoto();
             camertaRetake.style.display ="block";
+            cameraTrigger.style.display="none";
+            cameraTrigger.classList = ""
         }
     },1000)
 }

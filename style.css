@@ -32,9 +32,30 @@ html, body{
     bottom: 30px;
     left: calc(50% - 100px);
 }
+@keyframes enlargeDisappear
+{
+  0%
+  {
+    backface-visibility: hidden;
+    transform: scale( 0 );
+    opacity: 0;
+  }
 
+  100%
+  {
+    backface-visibility: hidden;
+    transform: scale( 4 );
+    opacity: 1;
+  }
+}
+
+.count-effect{
+    animation: enlargeDisappear 1s infinite;
+}
 #camera--trigger{
     position: fixed;
+    backface-visibility: hidden;
+    font-size: 16px;
     bottom: 30px;
     left: calc(50% - 100px);
 }
