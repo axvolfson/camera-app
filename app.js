@@ -39,9 +39,9 @@ function triggerCountDown(){
     let startSecond = 5;
     camertaRetake.style.display ="none";
     const countDown = setInterval(()=>{
-        cameraTrigger.innerHTML = startSecond === 0 ? "Smile!" : startSecond;
+        cameraTrigger.innerHTML = startSecond <= 0 ? "Smile!" : startSecond;
         startSecond--;
-        if(startSecond === -1) {
+        if(startSecond === -2) {
             clearInterval(countDown);
             takePhoto();
             camertaRetake.style.display ="block";
