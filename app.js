@@ -51,7 +51,7 @@ function triggerCountDown(){
             cameraTrigger.style.display="none";
             cameraTrigger.classList = ""
         }
-    },1000)
+    },1020)
 }
 
 // Start the video stream when the window loads
